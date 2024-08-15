@@ -17,7 +17,10 @@ class FeedCoordinator {
     }
     
     func start() {
+        let feedViewModel = FeedViewModel(interactor: FeedInteractor())
         let feedViewController = FeedViewController()
+        feedViewController.viewModel = feedViewModel
+
         navigationController.pushViewController(feedViewController, animated: true)
     }
 }

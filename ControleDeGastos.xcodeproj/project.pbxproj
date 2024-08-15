@@ -16,6 +16,12 @@
 		413932392C68E93B00BDCB27 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413932382C68E93B00BDCB27 /* HomeViewController.swift */; };
 		4139323F2C68EBBA00BDCB27 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139323E2C68EBBA00BDCB27 /* FeedCoordinator.swift */; };
 		413932412C68EC4000BDCB27 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413932402C68EC4000BDCB27 /* FeedViewController.swift */; };
+		41A4BAF02C6CE928000B01C6 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAEF2C6CE928000B01C6 /* FeedTableViewCell.swift */; };
+		41A4BAF32C6D82B1000B01C6 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAF22C6D82B1000B01C6 /* FeedViewModel.swift */; };
+		41A4BAF52C6D85BF000B01C6 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAF42C6D85BF000B01C6 /* FeedState.swift */; };
+		41A4BAF82C6D8600000B01C6 /* FeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAF72C6D8600000B01C6 /* FeedObject.swift */; };
+		41A4BAFB2C6D86F0000B01C6 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAFA2C6D86F0000B01C6 /* FeedInteractor.swift */; };
+		41A4BAFF2C6D874A000B01C6 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAFE2C6D874A000B01C6 /* LocalDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		413932382C68E93B00BDCB27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4139323E2C68EBBA00BDCB27 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		413932402C68EC4000BDCB27 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		41A4BAEF2C6CE928000B01C6 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		41A4BAF22C6D82B1000B01C6 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		41A4BAF42C6D85BF000B01C6 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
+		41A4BAF72C6D8600000B01C6 /* FeedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedObject.swift; sourceTree = "<group>"; };
+		41A4BAFA2C6D86F0000B01C6 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		41A4BAFE2C6D874A000B01C6 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 		41302CEC2C684D8600E51F04 /* ControleDeGastos */ = {
 			isa = PBXGroup;
 			children = (
+				41A4BAFC2C6D8700000B01C6 /* Shared */,
 				4139323C2C68EB2F00BDCB27 /* Feed */,
 				413932332C68E8F300BDCB27 /* Home */,
 				41302CED2C684D8600E51F04 /* AppDelegate.swift */,
@@ -94,6 +107,9 @@
 		4139323C2C68EB2F00BDCB27 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				41A4BAF92C6D86E5000B01C6 /* Interactor */,
+				41A4BAF62C6D85EA000B01C6 /* Model */,
+				41A4BAF12C6D828F000B01C6 /* ViewModel */,
 				4139323D2C68EBA100BDCB27 /* View */,
 				4139323E2C68EBBA00BDCB27 /* FeedCoordinator.swift */,
 			);
@@ -104,8 +120,50 @@
 			isa = PBXGroup;
 			children = (
 				413932402C68EC4000BDCB27 /* FeedViewController.swift */,
+				41A4BAEF2C6CE928000B01C6 /* FeedTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		41A4BAF12C6D828F000B01C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				41A4BAF22C6D82B1000B01C6 /* FeedViewModel.swift */,
+				41A4BAF42C6D85BF000B01C6 /* FeedState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		41A4BAF62C6D85EA000B01C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41A4BAF72C6D8600000B01C6 /* FeedObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		41A4BAF92C6D86E5000B01C6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				41A4BAFA2C6D86F0000B01C6 /* FeedInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		41A4BAFC2C6D8700000B01C6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				41A4BAFD2C6D8734000B01C6 /* DataSource */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		41A4BAFD2C6D8734000B01C6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				41A4BAFE2C6D874A000B01C6 /* LocalDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,12 +237,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				413932392C68E93B00BDCB27 /* HomeViewController.swift in Sources */,
+				41A4BAF02C6CE928000B01C6 /* FeedTableViewCell.swift in Sources */,
+				41A4BAFB2C6D86F0000B01C6 /* FeedInteractor.swift in Sources */,
 				41302CF22C684D8600E51F04 /* ViewController.swift in Sources */,
 				413932352C68E90600BDCB27 /* HomeCoordinator.swift in Sources */,
 				41302CEE2C684D8600E51F04 /* AppDelegate.swift in Sources */,
+				41A4BAF52C6D85BF000B01C6 /* FeedState.swift in Sources */,
 				4139323F2C68EBBA00BDCB27 /* FeedCoordinator.swift in Sources */,
 				41302CF02C684D8600E51F04 /* SceneDelegate.swift in Sources */,
 				413932412C68EC4000BDCB27 /* FeedViewController.swift in Sources */,
+				41A4BAF32C6D82B1000B01C6 /* FeedViewModel.swift in Sources */,
+				41A4BAFF2C6D874A000B01C6 /* LocalDataSource.swift in Sources */,
+				41A4BAF82C6D8600000B01C6 /* FeedObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
