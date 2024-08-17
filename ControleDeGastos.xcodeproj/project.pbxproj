@@ -9,26 +9,34 @@
 /* Begin PBXBuildFile section */
 		41302CEE2C684D8600E51F04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41302CED2C684D8600E51F04 /* AppDelegate.swift */; };
 		41302CF02C684D8600E51F04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41302CEF2C684D8600E51F04 /* SceneDelegate.swift */; };
-		41302CF22C684D8600E51F04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41302CF12C684D8600E51F04 /* ViewController.swift */; };
 		41302CF72C684D8700E51F04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41302CF62C684D8700E51F04 /* Assets.xcassets */; };
 		41302CFA2C684D8700E51F04 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 41302CF92C684D8700E51F04 /* Base */; };
 		413932352C68E90600BDCB27 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413932342C68E90600BDCB27 /* HomeCoordinator.swift */; };
 		413932392C68E93B00BDCB27 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413932382C68E93B00BDCB27 /* HomeViewController.swift */; };
 		4139323F2C68EBBA00BDCB27 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4139323E2C68EBBA00BDCB27 /* FeedCoordinator.swift */; };
 		413932412C68EC4000BDCB27 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413932402C68EC4000BDCB27 /* FeedViewController.swift */; };
+		413A44832C6F8A39009A7A3A /* SpentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A44822C6F8A39009A7A3A /* SpentState.swift */; };
+		4187BDA92C700830004A9A58 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187BDA82C700830004A9A58 /* UITextField.swift */; };
 		41A4BAF02C6CE928000B01C6 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAEF2C6CE928000B01C6 /* FeedTableViewCell.swift */; };
 		41A4BAF32C6D82B1000B01C6 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAF22C6D82B1000B01C6 /* FeedViewModel.swift */; };
 		41A4BAF52C6D85BF000B01C6 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAF42C6D85BF000B01C6 /* FeedState.swift */; };
 		41A4BAF82C6D8600000B01C6 /* FeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAF72C6D8600000B01C6 /* FeedObject.swift */; };
 		41A4BAFB2C6D86F0000B01C6 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAFA2C6D86F0000B01C6 /* FeedInteractor.swift */; };
 		41A4BAFF2C6D874A000B01C6 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BAFE2C6D874A000B01C6 /* LocalDataSource.swift */; };
+		41AD22D52C70F676002FFDAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD22D42C70F676002FFDAC /* ViewController.swift */; };
+		41AD22D82C70F6CA002FFDAC /* KeyboardHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD22D72C70F6CA002FFDAC /* KeyboardHandle.swift */; };
+		41B9C99E2C6E30B900D43D12 /* SpentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9C99D2C6E30B900D43D12 /* SpentCoordinator.swift */; };
+		41B9C9A12C6E322B00D43D12 /* SpeendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9C9A02C6E322B00D43D12 /* SpeendedViewController.swift */; };
+		41B9C9A42C6E325500D43D12 /* SpentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9C9A32C6E325500D43D12 /* SpentViewModel.swift */; };
+		41B9C9A82C6E352400D43D12 /* SpentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9C9A72C6E352400D43D12 /* SpentInteractor.swift */; };
+		41B9C9AB2C6E466800D43D12 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9C9AA2C6E466800D43D12 /* Date.swift */; };
+		41B9C9AE2C6E6A4C00D43D12 /* LoadingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9C9AD2C6E6A4C00D43D12 /* LoadingComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41302CEA2C684D8600E51F04 /* ControleDeGastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControleDeGastos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41302CED2C684D8600E51F04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41302CEF2C684D8600E51F04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		41302CF12C684D8600E51F04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41302CF62C684D8700E51F04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41302CF92C684D8700E51F04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41302CFB2C684D8700E51F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,12 +44,22 @@
 		413932382C68E93B00BDCB27 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4139323E2C68EBBA00BDCB27 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		413932402C68EC4000BDCB27 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		413A44822C6F8A39009A7A3A /* SpentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpentState.swift; sourceTree = "<group>"; };
+		4187BDA82C700830004A9A58 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		41A4BAEF2C6CE928000B01C6 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		41A4BAF22C6D82B1000B01C6 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		41A4BAF42C6D85BF000B01C6 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
 		41A4BAF72C6D8600000B01C6 /* FeedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedObject.swift; sourceTree = "<group>"; };
 		41A4BAFA2C6D86F0000B01C6 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
 		41A4BAFE2C6D874A000B01C6 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		41AD22D42C70F676002FFDAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41AD22D72C70F6CA002FFDAC /* KeyboardHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandle.swift; sourceTree = "<group>"; };
+		41B9C99D2C6E30B900D43D12 /* SpentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpentCoordinator.swift; sourceTree = "<group>"; };
+		41B9C9A02C6E322B00D43D12 /* SpeendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeendedViewController.swift; sourceTree = "<group>"; };
+		41B9C9A32C6E325500D43D12 /* SpentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpentViewModel.swift; sourceTree = "<group>"; };
+		41B9C9A72C6E352400D43D12 /* SpentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpentInteractor.swift; sourceTree = "<group>"; };
+		41B9C9AA2C6E466800D43D12 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		41B9C9AD2C6E6A4C00D43D12 /* LoadingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +92,13 @@
 		41302CEC2C684D8600E51F04 /* ControleDeGastos */ = {
 			isa = PBXGroup;
 			children = (
+				41B9C9A92C6E465600D43D12 /* Extensions */,
+				41B9C99C2C6E307400D43D12 /* Spent */,
 				41A4BAFC2C6D8700000B01C6 /* Shared */,
 				4139323C2C68EB2F00BDCB27 /* Feed */,
 				413932332C68E8F300BDCB27 /* Home */,
 				41302CED2C684D8600E51F04 /* AppDelegate.swift */,
 				41302CEF2C684D8600E51F04 /* SceneDelegate.swift */,
-				41302CF12C684D8600E51F04 /* ViewController.swift */,
 				41302CF62C684D8700E51F04 /* Assets.xcassets */,
 				41302CF82C684D8700E51F04 /* LaunchScreen.storyboard */,
 				41302CFB2C684D8700E51F04 /* Info.plist */,
@@ -153,6 +172,8 @@
 		41A4BAFC2C6D8700000B01C6 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				41AD22D62C70F6AF002FFDAC /* Handler */,
+				41B9C9AC2C6E6A3E00D43D12 /* Components */,
 				41A4BAFD2C6D8734000B01C6 /* DataSource */,
 			);
 			path = Shared;
@@ -164,6 +185,68 @@
 				41A4BAFE2C6D874A000B01C6 /* LocalDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		41AD22D62C70F6AF002FFDAC /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				41AD22D72C70F6CA002FFDAC /* KeyboardHandle.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		41B9C99C2C6E307400D43D12 /* Spent */ = {
+			isa = PBXGroup;
+			children = (
+				41B9C9A62C6E34C200D43D12 /* Interactor */,
+				41B9C9A22C6E324500D43D12 /* ViewModel */,
+				41B9C99F2C6E320E00D43D12 /* View */,
+				41B9C99D2C6E30B900D43D12 /* SpentCoordinator.swift */,
+			);
+			path = Spent;
+			sourceTree = "<group>";
+		};
+		41B9C99F2C6E320E00D43D12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41B9C9A02C6E322B00D43D12 /* SpeendedViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		41B9C9A22C6E324500D43D12 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				41B9C9A32C6E325500D43D12 /* SpentViewModel.swift */,
+				413A44822C6F8A39009A7A3A /* SpentState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		41B9C9A62C6E34C200D43D12 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				41B9C9A72C6E352400D43D12 /* SpentInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		41B9C9A92C6E465600D43D12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				41B9C9AA2C6E466800D43D12 /* Date.swift */,
+				4187BDA82C700830004A9A58 /* UITextField.swift */,
+				41AD22D42C70F676002FFDAC /* ViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		41B9C9AC2C6E6A3E00D43D12 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				41B9C9AD2C6E6A4C00D43D12 /* LoadingComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,17 +321,26 @@
 			files = (
 				413932392C68E93B00BDCB27 /* HomeViewController.swift in Sources */,
 				41A4BAF02C6CE928000B01C6 /* FeedTableViewCell.swift in Sources */,
+				4187BDA92C700830004A9A58 /* UITextField.swift in Sources */,
 				41A4BAFB2C6D86F0000B01C6 /* FeedInteractor.swift in Sources */,
-				41302CF22C684D8600E51F04 /* ViewController.swift in Sources */,
+				41AD22D52C70F676002FFDAC /* ViewController.swift in Sources */,
 				413932352C68E90600BDCB27 /* HomeCoordinator.swift in Sources */,
+				41B9C9A82C6E352400D43D12 /* SpentInteractor.swift in Sources */,
 				41302CEE2C684D8600E51F04 /* AppDelegate.swift in Sources */,
+				41B9C9A42C6E325500D43D12 /* SpentViewModel.swift in Sources */,
 				41A4BAF52C6D85BF000B01C6 /* FeedState.swift in Sources */,
+				41B9C9A12C6E322B00D43D12 /* SpeendedViewController.swift in Sources */,
 				4139323F2C68EBBA00BDCB27 /* FeedCoordinator.swift in Sources */,
 				41302CF02C684D8600E51F04 /* SceneDelegate.swift in Sources */,
+				41B9C9AB2C6E466800D43D12 /* Date.swift in Sources */,
+				41B9C9AE2C6E6A4C00D43D12 /* LoadingComponent.swift in Sources */,
 				413932412C68EC4000BDCB27 /* FeedViewController.swift in Sources */,
+				41B9C99E2C6E30B900D43D12 /* SpentCoordinator.swift in Sources */,
 				41A4BAF32C6D82B1000B01C6 /* FeedViewModel.swift in Sources */,
 				41A4BAFF2C6D874A000B01C6 /* LocalDataSource.swift in Sources */,
+				413A44832C6F8A39009A7A3A /* SpentState.swift in Sources */,
 				41A4BAF82C6D8600000B01C6 /* FeedObject.swift in Sources */,
+				41AD22D82C70F6CA002FFDAC /* KeyboardHandle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

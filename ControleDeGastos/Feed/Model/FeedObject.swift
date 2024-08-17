@@ -8,6 +8,8 @@
 import Foundation
 
 struct FeedObject: Codable {
+    let id: String
     let name: String
+    let price: String
     let dateAtString: String
 }

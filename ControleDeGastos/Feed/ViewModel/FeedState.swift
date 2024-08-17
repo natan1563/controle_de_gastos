@@ -8,6 +8,7 @@
 import Foundation
 
 enum FeedState {
+    case none
     case loading
     case success([FeedObject])
     case error(String)

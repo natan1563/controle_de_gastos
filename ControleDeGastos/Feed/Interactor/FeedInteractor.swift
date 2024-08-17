@@ -13,4 +13,8 @@ class FeedInteractor {
     func fetch(completion: @escaping([FeedObject]?) -> Void) {
         completion(local.loadItems())
     }
+    
+    func remove(id: String) -> Bool {
+        return local.removeItem(id: id)
+    }
 }

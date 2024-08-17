@@ -8,15 +8,14 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-    private var mockData: [(String, String)] = [
-        ("Mercado", "10/07/2024"),
-        ("Luz", "15/07/2024"),
-        ("Agua", "13/07/2024"),
-        ("Internet", "14/07/2024"),
-    ]
+    private var feedItems: [FeedObject] = []
+    
+    let loading: LoadingComponent = {
+        return LoadingComponent(style: .medium)
+    }()
     
     var viewModel: FeedViewModel? {
-        willSet {
+        didSet {
             viewModel?.delegate = self
         }
     }
@@ -34,11 +33,7 @@ class FeedViewController: UIViewController {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Buscar"
-        textField.borderStyle = .roundedRect
-        textField.layer.cornerRadius = 5
-        textField.layer.masksToBounds = true
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.borderWidth = 1
+        textField.addShadowBorder()
 
         return textField
     }()
@@ -48,6 +43,7 @@ class FeedViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(FeedTableViewCell.self, forCellReuseIdentifier: FeedTableViewCell.identifier)
         tableView.backgroundColor = .systemBackground
+        tableView.allowsSelection = false
 
         return tableView
     }()
@@ -59,17 +55,21 @@ class FeedViewController: UIViewController {
         setupNavigationConfigs()
         setupComponents()
         setupConstraints()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        viewModel?.loadData()
+        setupDependencies()
+
+        configureDismissKeyboard()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel?.loadData()
+    }
+
     private func setupComponents() {
         view.addSubview(logo)
         view.addSubview(textField)
         view.addSubview(tableView)
+        view.addSubview(loading)
     }
     
     private func setupConstraints() {
@@ -86,7 +86,12 @@ class FeedViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            loading.topAnchor.constraint(equalTo: view.topAnchor),
+            loading.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loading.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loading.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
@@ -97,14 +102,34 @@ class FeedViewController: UIViewController {
         navigationItem.title = "Inicio"
         
         // Tab Bar
-        navigationController?.title = "Inicio"
+        navigationController?.tabBarItem.title = "Inicio"
         navigationController?.tabBarItem.image = UIImage(systemName: "house")
+    }
+    
+    func setupDependencies() {
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 }
 
 extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "Despesas"
+    }
+        
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Remover") { (action, view, completionHandler) in
+            let spent = self.feedItems[indexPath.row]
+            
+            if let deleted = self.viewModel?.removeItem(id: spent.id) {
+                self.feedItems.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+
+            completionHandler(true)
+        }
+
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 }
 
@@ -114,13 +139,13 @@ extension FeedViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        mockData.count
+        feedItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.identifier, for: indexPath) as! FeedTableViewCell
         
-        cell.spended = mockData[indexPath.row]
+        cell.spended = feedItems[indexPath.row]
         
         return cell
     }
@@ -128,6 +153,28 @@ extension FeedViewController: UITableViewDataSource {
 
 extension FeedViewController: FeedViewModelDelegate {
     func viewModelDidChanged(state: FeedState) {
-        print(state)
+        switch (state) {
+            case .none:
+                loading.stopAnimating()
+            break
+            case .loading:
+                loading.startAnimating()
+            break
+
+            case .success(let data):
+                feedItems = data
+                tableView.reloadData()
+                loading.stopAnimating()
+            break
+            
+            case .error(let msg):
+                let alert = UIAlertController(title: "Controle de Gastos", message: msg, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                
+                loading.stopAnimating()
+                
+                self.present(alert, animated: true)
+            break
+        }
     }
 }
